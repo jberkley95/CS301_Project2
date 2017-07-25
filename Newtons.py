@@ -18,7 +18,6 @@ for i in range(1, len(array[0])):
         k += 1
     array.append(temp)
 
-
 print(array)
 
 print('\nX'.ljust(10), end='')
@@ -29,12 +28,11 @@ for i in range(len(array[0])):
     print(']'.ljust(10), end='')
 print()
 
-
 for i in range(len(array[0])):
     j = 0
     while j < len(array[0]) + 1 - i:
-        #Uncomment line 37 to display decimal values, and comment out 38
-        #print('{0:.4f}'.format(array[j][i]).ljust(12), end='')
+        # Uncomment line 37 to display decimal values, and comment out 38
+        # print('{0:.4f}'.format(array[j][i]).ljust(12), end='')
         print(str(Fraction(array[j][i]).limit_denominator()).ljust(12), end='')
         j += 1
     print()
