@@ -7,7 +7,7 @@ from sympy import *
 x = symbols('x')
 init_printing(use_unicode=True)
 
-with open('/Users/johnberkley/PycharmProjects/CS301_Project2/input.txt') as f:
+with open('/Users/johnberkley/PycharmProjects/CS301_Project2/input2.txt') as f:
     array = [[float(x) for x in line.split()] for line in f]
 
 for i in range(1, len(array[0])):
@@ -17,8 +17,6 @@ for i in range(1, len(array[0])):
         temp[j] = ((array[i][j+1] - array[i][j]) / (array[0][k] - array[0][j]))
         k += 1
     array.append(temp)
-
-print(array)
 
 print('\nX'.ljust(10), end='')
 for i in range(len(array[0])):
@@ -31,7 +29,7 @@ print()
 for i in range(len(array[0])):
     j = 0
     while j < len(array[0]) + 1 - i:
-        # Uncomment line 37 to display decimal values, and comment out 38
+        # Uncomment line 33 to display decimal values, and comment out 34
         # print('{0:.4f}'.format(array[j][i]).ljust(12), end='')
         print(str(Fraction(array[j][i]).limit_denominator()).ljust(12), end='')
         j += 1
